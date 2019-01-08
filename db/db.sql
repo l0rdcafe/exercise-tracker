@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username TEXT UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS exercises (
+  id SERIAL PRIMARY KEY,
+  description TEXT NOT NULL,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  duration INTEGER NOT NULL,
+  date DATE
+);
