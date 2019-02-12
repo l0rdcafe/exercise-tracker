@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
-  username TEXT UNIQUE
+  username TEXT UNIQUE,
+  password TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS exercises (
